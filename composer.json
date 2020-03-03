@@ -1,0 +1,29 @@
+{
+	"name": "weavephp/middleware-middleman",
+	"description": "Weave glue-framework Middleman Middleware adaptor",
+	"type": "weave-adaptor",
+	"keywords" : ["weave", "middleware", "adaptor"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Robert Goldsmith",
+			"email": "r.s.goldsmith@far-blue.co.uk"
+		}
+	],
+	"require": {
+		"php": "^7.2",
+		"mindplay/middleman": "~3.0"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Weave\\Middleware\\Middleman\\": "src/"
+		}
+	},
+	"scripts": {
+		"phpcs": "php vendor/bin/phpcs",
+		"phan": "docker run -v $PWD:/mnt/src --rm -u \"$(id -u):$(id -g)\" cloudflare/phan:latest -po analysis.txt"
+	}
+}
