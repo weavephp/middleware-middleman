@@ -56,6 +56,6 @@ class Middleman implements \Weave\Middleware\MiddlewareAdaptorInterface
 	public function executePipeline(mixed $pipeline, Request $request, Response $response = null): Response
 	{
 		$middleman = new \mindplay\middleman\Dispatcher($pipeline, $this->resolver);
-		return $middleman->dispatch($request);
+		return $middleman->handle($request);
 	}
 }
